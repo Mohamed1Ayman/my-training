@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+background-image: url("image.jpg");
+background-size: cover;
+background-repeat: no-repeat;
+font-family: "Poppins", sans-serif;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.to-do{
+    backdrop-filter: blur(10px);
+    padding: 20px;      
+    border-radius: 10px;
+    border: 2px solid aqua;
+    box-shadow: 0 0 10px aqua;
+    width: 50%;
+    margin: 50px 0;
+}
+
+h1{
+    text-align: center;
+    margin: 10px 0;
+    font-weight: 800;
+}
+
+input{
+    width: 100%;
+    border-radius: 10px;
+    outline: none;
+    font-size: 30px;
+    border: 1px solid aqua;
+    padding: 5px 15px;
+    text-align: center;
+    margin:10px 0 ;
+}
+
+ul li{
+    font-size: 20px;
+    margin: 15px 0;
+    text-wrap: wrap;
+    font-weight: 600;
+    list-style: none;
+    padding: 5px 30px;
+    background: #fff;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url('unchecked.webp');
+    background-position: center;
+    background-size: cover;
+    top:7px;
+    left: 10px;
+    cursor: pointer;
+}
+
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before{
+    background-image: url('checked.png');
+    cursor: pointer;
+}
+
+p{
+    color: red;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    padding: 20px 0;
+}
+
+button{
+    font-size: 30px;
+    border: 2px solid aqua;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px auto;
+    cursor: pointer;
+    transition: 0.5s ease;
+    display: block;
+    text-align: center;
+
+}
+
+button:hover{
+    background: transparent;
+    transform: scale(1.1);
+    box-shadow: 0 0 10px aqua;
+}
+
+span{
+    position: absolute;
+    right: 10px;
+    color: red;
+    font-size: 40px;
+    top: -11px;
+    cursor: pointer;
+}
